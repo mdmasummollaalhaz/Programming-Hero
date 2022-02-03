@@ -37,7 +37,9 @@ var result = firstLargest(77, 33);
 console.log(result);
 
 
+// Task 1: Create a function that takes three numbers as input parameter and returns you the largest number of the three
 
+// Task 2: Writr a function to find the smallest of three numbers
 
 /* 
 var max = Math.max(business, minister, army);
