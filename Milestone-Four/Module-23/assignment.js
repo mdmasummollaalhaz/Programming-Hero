@@ -2,7 +2,6 @@
 
 // We know that 1 ana = 0.0625 vori
 // 1 vori = 16 ana
-
 function anaToVori(ana){
     let vori = ana * 0.0625;
     return vori;
@@ -68,5 +67,24 @@ const totalPersonsInput = picnicBudget(301);
 console.log('Total cost:', totalPersonsInput);
 
 
-
-
+// Problem 4:
+function oddFriend( frindsName ){
+    for( let i = 0; i < frindsName.length; i++){
+           if( frindsName[i].length %2 != 0  ){
+           return frindsName[i];
+       }
+    }
+}
+const frindsName = [
+    'muzami',
+    'harun',
+    'maruff',
+    'Ali',
+    'Karim',
+    'Sohel',
+    'Hossain',
+    'Shikder',
+    'Manna'
+];
+const outPut = oddFriend(frindsName);
+console.log('The odd:', outPut);
