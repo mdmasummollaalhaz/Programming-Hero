@@ -13,7 +13,6 @@ console.log('Total vori:', totalVore);
 
 
 // Problem 2:
-
 function pandaCost(singaraQuantity, somuchaQuantity, jilapiQuantity){
     
     // Per items cost
@@ -35,7 +34,38 @@ const inputItems = pandaCost(1, 1, 1);
 console.log('Total taka:', inputItems);
 
 
+// Problem 3:
+function picnicBudget(persons){
+    
+    // Budget for person
+    const firstLessThan100  = 5000;
+    const secondLessThan200 = 4000;
+    const thirdMoreThanRest = 3000;
 
+    // Conditions
+    if(persons <= 100){
+        const firstCondition = persons * firstLessThan100;
+        return firstCondition;
+    }
+    else if(persons <= 200){
+        const secondCondition   = 100 * firstLessThan100;
+        const restPerson        = persons - 100;
+        const secondRestPerson  = restPerson * secondLessThan200;
+        const totalPersons      = secondCondition + secondRestPerson;
+        return totalPersons;
+    }
+    else{
+        const secondCondition   = 100 * firstLessThan100;
+        const secondRestPerson  = 100 * secondLessThan200;
+        const restPerson        = persons - 200;
+        const totalRestPerson  = restPerson * thirdMoreThanRest;
+        const totalPersons      = secondCondition + secondRestPerson + totalRestPerson;
+        return totalPersons;
+    }
+}
+
+const totalPersonsInput = picnicBudget(301);
+console.log('Total cost:', totalPersonsInput);
 
 
 
