@@ -25,11 +25,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia id recusandae eaque exercitationem ea nisi laborum natus sed itaque.</p>
     </article>
     <article>
-        <h3>My Blog 2</h3>
+        <h3 id="second-title">My Blog 2</h3>
         <p>Lorem iepsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia id recusandae eaque exercitationem ea nisi laborum natus sed itaque.</p>
     </article>
     <article>
-        <h3>My Blog 3</h3>
+        <h3 id="third-title">My Blog 3</h3>
         <p>Lorem ipsuem dolor sit amet, consectetur adipisicing elit. Rerum mollitia id recusandae eaque exercitationem ea nisi laborum natus sed itaque.</p>
     </article>
 
@@ -38,16 +38,27 @@
 
         const blogTitles = document.getElementsByTagName('h3');
         for(const h3 of blogTitles){
-            console.log(h3.innerText);
+            // console.log(h3.innerText);
         }
 
         const blogDetails = document.getElementsByTagName('p');
         for (const p of blogDetails){
-            console.log(p);  
+            // console.log(p.innerText);
         }
-        
+
         // console.log(blogTitles);
         // console.log(document.body);
+
+
+
+
+        const secontTitle = document.getElementById('second-title');
+        secontTitle.style.textAlign = 'center';
+
+        const third = document.getElementById('third-title');
+        third.innerText = 'Title update';
+        third.style.backgroundColor = 'red';
+        third.style.padding = '50px';
         
     </script>
 </body>
