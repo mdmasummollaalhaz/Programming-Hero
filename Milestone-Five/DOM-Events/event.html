@@ -13,6 +13,25 @@
 </style>
 <body>
     <h1 onclick="console.log('Hello click Man')">Event - Click</h1>
-    <button onclick="alert(7)">Click me</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">Click me: Yellow</button>
+    <button onclick="makeRed()">Click me: Red</button>
+    <button id="blue-botton">Click me: Blue</button>
+
+
+
+
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor = 'red';
+        }
+        
+        const blutBotton = document.getElementById('blue-botton');
+        // console.log(blutBotton);
+        blutBotton.onclick = makeBule;
+        function makeBule(){
+            document.body.style.backgroundColor = 'blue';
+        }
+        
+    </script>
 </body>
 </html>
