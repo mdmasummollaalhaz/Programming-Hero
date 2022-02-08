@@ -7,8 +7,8 @@
     <title>Event</title>
 </head>
 <style>
-    *{
-        margin: 20px;
+    body{
+        margin: 50px;
     }
 </style>
 <body>
@@ -16,8 +16,10 @@
     <button onclick="document.body.style.backgroundColor='yellow'">Click me: Yellow</button>
     <button onclick="makeRed()">Click me: Red</button>
     <button id="blue-botton">Click me: Blue</button>
-
-
+    <button id="green-botton">Click me: Green</button>
+    <button id="goldenrod-botton">Click me: Golden Rod</button>
+    <button id="hot-pink-botton">Click me: Hot pink</button>
+    <button id="light-blur-botton">Click me: Light Blue</button>
 
 
     <script>
@@ -31,7 +33,45 @@
         function makeBule(){
             document.body.style.backgroundColor = 'blue';
         }
+
+
+
+        const greenButton = document.getElementById('green-botton');
+        // console.log(greenButton);
+        // Anonymous function
+        greenButton.onclick = function(){
+            document.body.style.backgroundColor = 'green';
+        }
+
+
+
+
+        const goldenButton = document.getElementById('goldenrod-botton');
+        // console.log(goldenButton);
+        goldenButton.addEventListener('click', makeGoldenRod);
+        function makeGoldenRod(){
+            document.body.style.backgroundColor= 'goldenrod';
+        }
+
+
+
+
+        const hotPinkButton = document.getElementById('hot-pink-botton');
+        // console.log(hotPinkButton);
+
+        hotPinkButton.addEventListener('click', function(){
+            document.body.style.backgroundColor = 'hotpink'
+        })
         
+        
+        
+        
+        document.getElementById('light-blur-botton').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'lightblue'
+        })
+
+
+
     </script>
 </body>
 </html>
