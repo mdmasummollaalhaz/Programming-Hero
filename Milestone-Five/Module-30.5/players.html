@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+
+    <style>
+        .player-name{
+            font-size: 1.5em;
+            font-weight: 600;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Player stats</h1>
+    </header>
+    <main>
+        <section id="players">
+            <!-- div.playe*4r>h4.player-name{player - $}+p>lorem30 -->
+            <div class="player">
+                <h4 class="player-name">player - 1</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum obcaecati dolore qui cupiditate veritatis eveniet nihil quo magni ipsa voluptate dicta numquam, saepe suscipit itaque molestiae vitae, commodi voluptas fuga!</p>
+            </div>
+            <div class="player">
+                <h4 class="player-name">player - 2</h4>
+                <p>Facilis consectetur culpa accusantium doloremque suscipit maiores modi labore minus nostrum? Minima odit, ad tempore alias vitae accusamus necessitatibus itaque eveniet officia aut deserunt, recusandae illo cum, magni fuga! Mollitia?</p>
+            </div>
+            <div class="player">
+                <h4 class="player-name">player - 3</h4>
+                <p>Doloribus consectetur quis expedita in cumque voluptatum ipsam quod! Suscipit, maiores? Quam praesentium velit molestias culpa. Aspernatur iure quae eum iusto delectus neque illum optio, tempore facere ea repellendus ipsa.</p>
+            </div>
+            <div class="player">
+                <h4 class="player-name">player - 4</h4>
+                <p>Doloribus, ipsa aperiam possimus eveniet tempore nostrum reprehenderit qui enim obcaecati odit quidem perferendis, expedita repudiandae quasi repellendus temporibus assumenda placeat laboriosam molestias. Maxime optio est adipisci pariatur facilis nihil.</p>
+            </div>
+            <button onclick="addPlayer()">Add player</button>
+        </section>
+    </main>
+
+    <script>
+        const players = document.getElementsByClassName('player');
+        for(const player of players){
+            console.log(player);
+            player.style.border = '1px solid red';
+            player.style.margin = '10px';
+            player.style.padding = '5px'
+            
+        }
+        function addPlayer(){
+            const playersContainer = document.getElementById('players');
+
+        }
+    </script>
+</body>
+</html>
