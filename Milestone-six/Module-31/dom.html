@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="friend-container">
+        <!-- div.friend*4>h3.friend-name{Friend-$}+p>lorem2 -->
+        <div class="friend">
+            <h3 class="friend-name">Friend-1</h3>
+            <p>Lorem, ipsum.</p>
+        </div>
+        <div class="friend">
+            <h3 class="friend-name">Friend-2</h3>
+            <p>Animi, impedit?</p>
+        </div>
+        <div class="friend">
+            <h3 class="friend-name">Friend-3</h3>
+            <p>Nam, recusandae.</p>
+        </div>
+        <div class="friend">
+            <h3 class="friend-name">Friend-4</h3>
+            <p>Exercitationem, atque?</p>
+        </div>
+    </div>
+    <div>
+        <h2>Control room</h2>
+        <button id="add-border">Add border</button>
+        <button onclick="addBackgroundColor()">Add background</button>
+        <button id="add-friend">Add friend</button>
+        <button>Color firend name</button>
+        <button>Extra</button>
+    </div>
+
+    <script>
+        document.getElementById('add-border').addEventListener('click', function(){
+            // console.log('clicked');
+            const container = document.getElementById('friend-container');
+            container.style.border = '3px solid red';
+        
+            
+        })
+
+        function addBackgroundColor(){
+        const friends = document.getElementsByClassName('friend');
+        for(const friend of friends){
+            friend.style.backgroundColor = 'lightblue';
+        }
+
+    }
+
+    document.getElementById('add-friend').addEventListener('click', function(){
+        const container = document.getElementById('friend-container');
+        const friendDiv = document.createElement('div');
+        friendDiv.classList.add('friend');
+        friendDiv.innerHTML =`
+            <h3 class="friend-name">New Friend</h3>
+            <p>Nam, recusandae.</p>
+        `
+        container.appendChild(friendDiv);
+    })
+    </script>
+</body>
+</html>
