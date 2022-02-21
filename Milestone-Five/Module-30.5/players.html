@@ -37,23 +37,56 @@
                 <h4 class="player-name">player - 4</h4>
                 <p>Doloribus, ipsa aperiam possimus eveniet tempore nostrum reprehenderit qui enim obcaecati odit quidem perferendis, expedita repudiandae quasi repellendus temporibus assumenda placeat laboriosam molestias. Maxime optio est adipisci pariatur facilis nihil.</p>
             </div>
-            <button onclick="addPlayer()">Add player</button>
         </section>
+        <button onclick="addPlayer()">Add player</button>
     </main>
 
     <script>
-        const players = document.getElementsByClassName('player');
-        for(const player of players){
-            console.log(player);
+        function setPlayerStyle(player){
             player.style.border = '1px solid red';
             player.style.margin = '10px';
-            player.style.padding = '5px'
+            player.style.padding = '5px';
+            player.style.borderRadius = '5px';
+        }
+        const players = document.getElementsByClassName('player');
+        for(const player of players){
+            setPlayerStyle(player);
+            /* player.addEventListener('click', function(){
+                player.style.backgroundColor = 'yellow'
+            }); */
+            
             
         }
         function addPlayer(){
             const playersContainer = document.getElementById('players');
+            const player = document.createElement('div');
+            player.classList.add('player');
+            // console.log(player);
+            player.innerHTML = `
+            <h4 class="player-name">New player</h4>
+                <p>Facilis consectetur culpa accusantium doloremque suscipit maiores modi labore minus nostrum? Minima odit, ad tempore alias vitae accusamus necessitatibus itaque eveniet officia aut deserunt, recusandae illo cum, magni fuga! Mollitia?</p>
+            `;
+            setPlayerStyle(player);
+            playersContainer.appendChild(player);
+            /* player.addEventListener('click', function(){
+                player.style.backgroundColor = 'yellow'
+            }) */
 
+            
         }
+
+        document.getElementById('players').addEventListener('click', function(event){
+            // console.log(event.target.tagName.toLowerCase());
+            if(event.target.tagName.toLowerCase() == 'div'){
+                event.target.style.backgroundColor = 'yellow';
+            }
+            else{
+                // console.log(event.target.parentNode);
+                event.target.parentNode.style.backgroundColor = 'yellow'
+                
+            }
+            
+        })
     </script>
 </body>
 </html>
