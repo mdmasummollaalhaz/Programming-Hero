@@ -1,6 +1,5 @@
 class TeamMember{
     name;
-    role = 'Support web Dev';
     address = 'BD';
     constructor(name, address){
         this.name = name;
@@ -10,6 +9,7 @@ class TeamMember{
 
 class Support extends TeamMember{
     groupSupportTime;
+    designation = 'Support web Dev';
     constructor(name, address, time){
         super(name, address);
         this.groupSupportTime = time;
@@ -27,6 +27,7 @@ class StudentCare extends TeamMember{
         this.name = name;
         this.address = address;
     } */
+    designation = 'Care web Dev';
     buildARoutine(student){
         console.log(this.name, 'Build a routine', student);
         
@@ -42,7 +43,7 @@ class NeptuneDev extends TeamMember{
         this.name = name;
         this.address = address;
     } */
-
+    designation = 'Neptune App Dev';
     codeEditor;
     constructor(name, address, editor){
         super(name, address);
@@ -61,4 +62,10 @@ aamir.startSession();
 const alia = new StudentCare('Alia Batt', 'Mumbai');
 const ash = new NeptuneDev ('Ash','India', 'Android Studio' );
 ash.releaseApp('1.4.5')
-console.log(ash);
+console.log(ash.name);
+
+
+
+// Proto chan
+// ash.__proto__
+// ash.hasOwnProperty
